@@ -4,9 +4,14 @@ using namespace std;
 class A {
 	int value;
 public:
-	A(int x){
+	A(int x){ // parameterized constructor
 		value=x;
 	}
+
+	A(A & obj_a){ // copy constructor
+		value=obj_a.value;
+	}
+
 	void display(){
 		cout<<value<<endl;
 	}
@@ -14,8 +19,10 @@ public:
 
 int main()
 {
-    A obj_a(10);  // constructor value assign
+    A obj_a(10);  
 
-    obj_a.display();
+    A obj2(obj_a);// constructor value assign
+
+    obj2.display();
     return 0;
 }
