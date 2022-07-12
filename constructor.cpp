@@ -8,8 +8,8 @@ public:
 		value=x;
 	}
 
-	A(A & obj_a){ // copy constructor
-		value=obj_a.value;
+	A(A & lula){ // copy constructor
+		value=lula.value;
 	}
 
 	void display(){
